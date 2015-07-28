@@ -13,10 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        initUserDefaults()
         return true
+    }
+    
+    func initUserDefaults() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if (defaults.stringForKey("DeviceID") == nil) {
+            defaults.setObject("A_000", forKey: "DeviceID")
+        }
+        
+        if (defaults.stringForKey("UUID") == nil) {
+            let uuid = "5595E747-47D4-44CD-9BC3-092D3E0AF8D6"
+            defaults.setObject(uuid, forKey: "UUID")
+        }
+        
+        if (defaults.stringForKey("Post Frequency") == nil) {
+            defaults.setInteger(1, forKey: "Post Frequency")
+        }
+        
+        defaults.synchronize()
     }
 
     func applicationWillResignActive(application: UIApplication) {
