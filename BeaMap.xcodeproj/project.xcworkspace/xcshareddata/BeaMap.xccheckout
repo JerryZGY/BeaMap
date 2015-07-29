@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6ECB3DF9-C25B-4F07-85D4-0C63325579FE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>BeaMap</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3626FCACF8ACA14DABCC8B758024EF7D861068F0</key>
 		<string>https://bitbucket.org/jerryzang/beamap.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BeaMap.xcodeproj/project.xcworkspace</string>
+	<string>BeaMap.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3626FCACF8ACA14DABCC8B758024EF7D861068F0</key>

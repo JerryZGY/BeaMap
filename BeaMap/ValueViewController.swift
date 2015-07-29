@@ -10,22 +10,34 @@ import UIKit
 
 class ValueViewController: UITableViewController {
     var placeholder:String!
+    var value:String!
     var keyboardType:UIKeyboardType = UIKeyboardType.Default
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
-        textField.placeholder = placeholder
-        
+        loadValue()
     }
     
     override func viewWillAppear(animated: Bool) {
-        if let value = NSUserDefaults.standardUserDefaults().stringForKey(self.title!) {
-            textField.text = value
-        }
         textField.becomeFirstResponder()
     }
     
     override func viewWillDisappear(animated: Bool) {
+        saveUserDefaults()
         textField.resignFirstResponder()
+    }
+    
+    func loadValue() {
+        textField.placeholder = placeholder
+        textField.text = value
+        textField.keyboardType = keyboardType
+    }
+    
+    func saveUserDefaults() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if !textField.text.isEmpty {
+            defaults.setObject(textField.text, forKey: self.title!)
+            defaults.synchronize()
+        }
     }
 }
