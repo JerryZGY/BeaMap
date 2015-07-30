@@ -14,8 +14,6 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var value_PostFreq: UILabel!
     @IBOutlet weak var value_PostData: UILabel!
     
-    
-    
     override func viewWillAppear(animated: Bool) {
         loadUserDefaults()
         if let selectedIndex = self.tableView.indexPathForSelectedRow() {
@@ -47,8 +45,33 @@ class SettingsViewController: UITableViewController {
 
     func loadUserDefaults() {
         let defaults = NSUserDefaults.standardUserDefaults()
+        var postData = [String]()
         value_DeviceID.text = defaults.stringForKey("DeviceID")
         value_UUID.text = defaults.stringForKey("UUID")
         value_PostFreq.text = defaults.stringForKey("Post Frequency")
+        
+        if defaults.boolForKey("isPostProx") {
+            postData.append("Prox")
+        }
+        
+        if defaults.boolForKey("isPostAccu") {
+            postData.append("Accu")
+        }
+        
+        if defaults.boolForKey("isPostRSSI") {
+            postData.append("RSSI")
+        }
+        
+        var postDataString = ", ".join(postData.map { $0 })
+        
+        if postData.count == 3 {
+            value_PostData.text = "All"
+        }
+        else if postDataString.isEmpty {
+            value_PostData.text = "None"
+        }
+        else {
+            value_PostData.text = postDataString
+        }
     }
 }

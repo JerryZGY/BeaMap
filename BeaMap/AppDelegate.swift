@@ -31,12 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if (defaults.stringForKey("Post Frequency") == nil) {
-            defaults.setInteger(1, forKey: "Post Frequency")
-        }
-        
-        if(defaults.objectForKey("Post Data") == nil) {
-//            let jsonObject:data
-//            defaults.setObject({ Prox: 'true', Accu: 'true', RSSI: 'true' }, forKey: "Post Data")
+            defaults.setObject(1, forKey: "Post Frequency")
         }
         
         defaults.synchronize()

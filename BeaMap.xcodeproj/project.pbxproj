@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6686E5C1B69B380007EAAAF /* PostDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6686E5B1B69B380007EAAAF /* PostDataViewController.swift */; };
 		F6B46C971B66204700EC5601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B46C961B66204700EC5601 /* AppDelegate.swift */; };
 		F6B46C991B66204700EC5601 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B46C981B66204700EC5601 /* WebViewController.swift */; };
 		F6B46C9E1B66204700EC5601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B46C9C1B66204700EC5601 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6686E5B1B69B380007EAAAF /* PostDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataViewController.swift; sourceTree = "<group>"; };
 		F6B46C911B66204700EC5601 /* BeaMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B46C951B66204700EC5601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6B46C961B66204700EC5601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				F6B46CC11B6739DA00EC5601 /* SettingsViewController.swift */,
 				F6B46C981B66204700EC5601 /* WebViewController.swift */,
 				F6B46CBA1B6718BA00EC5601 /* ValueViewController.swift */,
+				F6686E5B1B69B380007EAAAF /* PostDataViewController.swift */,
 				F6B46C9C1B66204700EC5601 /* Main.storyboard */,
 				F6B46C941B66204700EC5601 /* Supporting Files */,
 			);
@@ -224,6 +227,7 @@
 			files = (
 				F6B46CC41B673B5E00EC5601 /* MainViewController.swift in Sources */,
 				F6B46C971B66204700EC5601 /* AppDelegate.swift in Sources */,
+				F6686E5C1B69B380007EAAAF /* PostDataViewController.swift in Sources */,
 				F6B46C991B66204700EC5601 /* WebViewController.swift in Sources */,
 				F6B46CBB1B6718BA00EC5601 /* ValueViewController.swift in Sources */,
 				F6B46CC21B6739DA00EC5601 /* SettingsViewController.swift in Sources */,
